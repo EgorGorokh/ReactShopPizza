@@ -4,16 +4,15 @@ import Header from "./components/Header";
 import { Home } from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Cart from  "./pages/Cart";
-import { useSelector,useDispatch } from "react-redux";
-import { decrement, increment } from "./redux/slices/filterSlice"
+//import { useDispatch } from "react-redux";
+
 
 export  const SearchContext=React.createContext();
 
 
 function App() {
   const [searchValue,setSearchValue]=React.useState('');
-  //const count = useSelector(state => state.counter.count)
-  const dispatch = useDispatch()
+ // const dispatch = useDispatch()
 
   return (
   
