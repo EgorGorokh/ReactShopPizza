@@ -31,9 +31,30 @@ export const Home = () => {
 
 
 React.useEffect(()=>{
+
+
+
+
+/*
+  if (isMounted.current) {
+       const params = {
+         categoryId: categoryId > 0 ? categoryId : null,
+         sortProperty: sortType,
+         currentPage,
+       };
+
+     const queryString = qs.stringify(params, { skipNulls: true });
+
+       navigate(`/?${queryString}`);
+     }
+*/
+
+
+
+
 if(window.location.search){
   const params=qs.parse(window.location.search.substring(1));
-  const sort=list.find(obj=>obj.sortProperty===params.sortProperty)
+  const sort=list.find((obj)=>obj.sortProperty===params.sortProperty)
   dispatch(
     setFilters({
       ...params,

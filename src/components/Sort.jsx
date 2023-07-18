@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setSort } from "../redux/slices/filterSlice";
 
+
 export const list = [
   { name: "популярности", sortProperty: "rating" },
   { name: "популярности возравстанию", sortProperty: "-rating" },
@@ -15,6 +16,7 @@ export const list = [
 const Sort = () => {
   const dispatch = useDispatch();
   const sort = useSelector((state) => state.filter.sort);
+ 
 
   const [open, setOpen] = React.useState(false);
 
@@ -23,8 +25,13 @@ const Sort = () => {
     setOpen(false);
   };
 
+  
+
+
   return (
+    
     <div className="sort">
+      
       <div className="sort__label">
         <svg
           width="10"
